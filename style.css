@@ -472,6 +472,91 @@ li a svg {
   height: 18px;
 }
 
+/* SIZE CHART MODAL */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(53, 44, 48, 0.65);
+  z-index: 9999;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fffaf4;
+  width: 100%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+
+  position: relative;
+  animation: modalFade 0.3s ease;
+}
+
+.modal-content h2 {
+  color: #352c30;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+
+  border: none;
+  background: none;
+
+  font-size: 30px;
+  color: #786e72;
+  cursor: pointer;
+}
+
+.size-chart-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.modal-note {
+  color: #786e72;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 25px 18px;
+    max-width: 100%;
+  }
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1050px) {
