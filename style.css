@@ -480,10 +480,8 @@ li a svg {
   inset: 0;
   background: rgba(53, 44, 48, 0.65);
   z-index: 9999;
-
   justify-content: center;
   align-items: center;
-
   padding: 20px;
 }
 
@@ -494,34 +492,39 @@ li a svg {
 .modal-content {
   background: #fffaf4;
   width: 100%;
-  max-width: 550px;
+  max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
-
   padding: 30px;
   border-radius: 18px;
   text-align: center;
-
   position: relative;
-  animation: modalFade 0.3s ease;
 }
 
 .modal-content h2 {
   color: #352c30;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .modal-close {
   position: absolute;
   top: 12px;
   right: 18px;
-
   border: none;
   background: none;
-
   font-size: 30px;
   color: #786e72;
   cursor: pointer;
+}
+
+.size-chart-section {
+  margin-bottom: 30px;
+}
+
+.size-chart-section h3 {
+  color: #a85e70;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .size-chart-image {
@@ -537,23 +540,14 @@ li a svg {
   margin-top: 15px;
 }
 
-@keyframes modalFade {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* MOBILE */
 @media (max-width: 600px) {
   .modal-content {
     padding: 25px 18px;
     max-width: 100%;
+  }
+
+  .size-chart-section h3 {
+    font-size: 18px;
   }
 }
 
